@@ -9,14 +9,14 @@ class ChatPage extends StatefulWidget {
 
 class _ChatPageState extends State<ChatPage> {
   List<ChatUsers> chatUsers = [
-    ChatUsers(name: "Hao Nguyen", messageText: "abc", imageURL: "D:/Tai lieu Hoc tap/Tai lieu Hoc tap/code/my messenger app/flutter_app/lib/models/images/dark_earth-wallpaper-1920x1080.jpg", time: "Now"),
-    ChatUsers(name: "Linh dau cat moi", messageText: "cde", imageURL: "D:/Tai lieu Hoc tap/Tai lieu Hoc tap/code/my messenger app/flutter_app/lib/models/images/dark_earth-wallpaper-1920x1080.jpg", time: "Yesterday"),
-    ChatUsers(name: "Hieu Minh", messageText: "abc", imageURL: "D:/Tai lieu Hoc tap/Tai lieu Hoc tap/code/my messenger app/flutter_app/lib/models/images/dark_earth-wallpaper-1920x1080.jpg", time: "31 Mar"),
-    ChatUsers(name: "Philip Fox", messageText: "abc", imageURL: "D:/Tai lieu Hoc tap/Tai lieu Hoc tap/code/my messenger app/flutter_app/lib/models/images/dark_earth-wallpaper-1920x1080.jpg", time: "28 Mar"),
-    ChatUsers(name: "Debra Hawkins", messageText: "abc", imageURL: "D:/Tai lieu Hoc tap/Tai lieu Hoc tap/code/my messenger app/flutter_app/lib/models/images/dark_earth-wallpaper-1920x1080.jpg", time: "23 Mar"),
-    ChatUsers(name: "Jacob Pena", messageText: "will update you in evening", imageURL: "images/userImage6.jpeg""D:/Tai lieu Hoc tap/Tai lieu Hoc tap/code/my messenger app/flutter_app/lib/models/images/dark_earth-wallpaper-1920x1080.jpg", time: "17 Mar"),
-    ChatUsers(name: "Andrey Jones", messageText: "Can you please share the file?", imageURL: "images/userImage7.jpeg""D:/Tai lieu Hoc tap/Tai lieu Hoc tap/code/my messenger app/flutter_app/lib/models/images/dark_earth-wallpaper-1920x1080.jpg", time: "24 Feb"),
-    ChatUsers(name: "John Wick", messageText: "How are you?", imageURL: "D:/Tai lieu Hoc tap/Tai lieu Hoc tap/code/my messenger app/flutter_app/lib/models/images/dark_earth-wallpaper-1920x1080.jpg", time: "18 Feb"),
+    ChatUsers(name: "Hao Nguyen", messageText: "abc", imageURL: "https://i.pinimg.com/originals/79/d3/1e/79d31e406fe3d3d7322b18666184911d.png", time: "Now"),
+      ChatUsers(name: "Linh dau cat moi", messageText: "cde", imageURL: "https://iupac.org/wp-content/uploads/2018/05/default-avatar.png", time: "Yesterday"),
+    ChatUsers(name: "Hieu Minh", messageText: "abc", imageURL: "https://iupac.org/wp-content/uploads/2018/05/default-avatar.png", time: "31 Mar"),
+    ChatUsers(name: "Hoang Minh", messageText: "abc", imageURL: "https://iupac.org/wp-content/uploads/2018/05/default-avatar.png", time: "28 Mar"),
+    ChatUsers(name: "Debra Hawkins", messageText: "abc", imageURL: "https://iupac.org/wp-content/uploads/2018/05/default-avatar.png", time: "23 Mar"),
+    ChatUsers(name: "Jacob Pena", messageText: "will update you in evening", imageURL: "https://iupac.org/wp-content/uploads/2018/05/default-avatar.png", time: "17 Mar"),
+    ChatUsers(name: "Andrey Jones", messageText: "Can you please share the file?", imageURL: "https://iupac.org/wp-content/uploads/2018/05/default-avatar.png", time: "24 Feb"),
+    ChatUsers(name: "John Wick", messageText: "How are you?", imageURL: "https://iupac.org/wp-content/uploads/2018/05/default-avatar.png", time: "18 Feb"),
   ];
   @override
   Widget build(BuildContext context) {
@@ -28,6 +28,7 @@ class _ChatPageState extends State<ChatPage> {
           children: <Widget>[
             ChatPageHeader(),
             SearchBar(),
+            
             ListViewChats(chatUsers: chatUsers)
           ],
         ),
