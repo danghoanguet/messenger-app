@@ -28,7 +28,6 @@ class _ChatPageState extends State<ChatPage> {
           children: <Widget>[
             ChatPageHeader(),
             SearchBar(),
-            
             ListViewChats(chatUsers: chatUsers)
           ],
         ),
@@ -78,21 +77,50 @@ class ChatPageHeader extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Text("Chats",style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold),),
-            Container(
-              padding: EdgeInsets.only(left: 8,right: 8,top: 2,bottom: 2),
-              height: 30,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                color: Colors.blue[50],
-              ),
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.add,color: Colors.lightBlueAccent,size: 20,),
-                  SizedBox(width: 2,),
-                  Text("Add New",style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),),
-                ],
-              ),
+            Row(
+              children: [
+                Container(
+                  //padding: EdgeInsets.only(left: 8,right: 8,top: 2,bottom: 2),
+                  height: 40,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.white,
+                  ),
+                  child:
+                  Row(
+                    children: <Widget>[
+                      CircleAvatar(
+                        backgroundImage: NetworkImage("https://lh3.googleusercontent.com/ogw/ADGmqu-skvmAw-lK5G9f6sVIMfpQw2ksLJtB1nMYgXh9Jw=s83-c-mo"),
+                        maxRadius: 25,
+
+                      ),
+                      Text("Chats",style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold,color: Colors.black),),
+                    ],
+                  ),
+                )
+
+              ],
+            ),
+            Row(
+              children: [
+                Container(
+                  padding: EdgeInsets.only(left: 8,right: 8,top: 2,bottom: 2),
+                  height: 40,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.white,
+                  ),
+                  child: Row(
+                    children: <Widget>[
+                      Icon(Icons.note_add_outlined,color: Colors.black,size: 30,),
+                      SizedBox(width: 10,),
+                      Icon(Icons.camera_alt,color: Colors.black,size: 30),
+                      //Text("Add",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                    ],
+                  ),
+                ),
+
+              ],
             )
           ],
         ),
